@@ -1,1 +1,1 @@
-// TODO: fill me in
+angular.module('blockbuster', [])

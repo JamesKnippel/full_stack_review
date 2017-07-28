@@ -2,10 +2,14 @@
 
 angular.module('blockbuster')
   .controller('AppController', function(movieService) {
-    //TODO: fill me in
+    this.appTitle = 'blockbuster';
+
+
+    this.$onInit = () => {
+      movieService.getMovies();
+    };
   })
-  .directive('app', function() {
-    return {
-      //TODO: fill me in
-    }
+  .component('app', {
+    controller: 'AppController',
+    templateUrl: 'src/templates/app.html'
   })

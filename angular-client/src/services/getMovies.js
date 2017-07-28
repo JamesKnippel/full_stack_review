@@ -1,9 +1,17 @@
 angular.module('blockbuster')
 .service('movieService', function($http) {
   this.getMovies = function() {
-    //TODO: fill me in
+    return $http.get('api/movies')
+      .then((result) => {
+        console.log('result is' ,result);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }
+  
   this.addMovie = function(data) {
-    //TODO: fill me in
+    //post
   }
+
 })

@@ -1,11 +1,15 @@
-//TODO: define your db schemas here
 
 const Sequelize = require('sequelize')
-const db = require('../config')
+const db = require('../config.js')
 
 const Movie = db.define('movies', {
-  //TODO: FILL ME IN
-})
+  title: Sequelize.STRING,
+  numberOfCopies: Sequelize.INTEGER,
+  IMDBrating: Sequelize.INTEGER
+});
 
+Movie.sync()
+.then(()=>{console.log('succesfull table addition')})
+.catch(()=>{console.log('failed to add table to db')})
 
-// **other files will need access to information in here**
+module.exports = Movie;

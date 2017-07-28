@@ -1,7 +1,9 @@
 angular.module('blockbuster')
-  .directive('movieList', function() {
-    return {
-      //TODO: fill me in
-    }
+  .component('movieList', {
+    bindings: {
+
+    },
+    templateUrl: ''
   })
+
   
