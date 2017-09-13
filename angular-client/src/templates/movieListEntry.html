@@ -1,3 +1,8 @@
-<li>
-  <!--TODO: fill me in-->
+<li class='movie-entry'>
+  <div>
+    <h3> Title: {{$ctrl.movie.title}}</h3>
+    <h4> Number Of Copies: {{$ctrl.movie.numberOfCopies}}</h4>
+    <h4> IMDB Rating: {{$ctrl.movie.IMDBrating}}</h4>
+    <button ng-click="$ctrl.deleteEntry()">X</button>
+  <div>
 </li>

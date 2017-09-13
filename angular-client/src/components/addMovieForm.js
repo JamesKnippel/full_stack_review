@@ -1,10 +1,20 @@
 angular.module('blockbuster')
-  .controller('AddMovieController', function(movieService) {
-    //TODO: fill me in
+  .controller('addMovieFormController', function (movieService) {
+    this.submitEntry = (data) => {
+      this.movie = {
+        title: 'x',
+        numberOfCopies: 'x',
+        IMDBrating: 'x'
+    };
+      movieService.addMovie(data)
+    }
+
   })
-  .component('addMovieForm',  {
-    
-    controller: '',
-    templateUrl: ''
+  .component('addMovieForm', {
+    bindings: {
+      func: '<'
+    },
+
+    controller: 'addMovieFormController',
+    templateUrl: 'src/templates/addMovieForm.html'
   })
-  

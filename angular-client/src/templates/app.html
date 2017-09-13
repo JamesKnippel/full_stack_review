@@ -1,7 +1,9 @@
 <div>
   <h1>{{$ctrl.appTitle}}</h1>
   <nav>
-    <button>Movies</button>
-    <button>Add Movie</button>
+    <button ng-click="$ctrl.renderMovies()">Movies</button>
+    <button ng-click="$ctrl.displayAddMovieForm()">Add Movie</button>
   </nav>
+  <movie-list movies="$ctrl.movies" ng-if="$ctrl.fetchedMovies"></movie-list>
+  <add-movie-form ng-if="$ctrl.displayForm" func="$ctrl.renderMovies"></add-movie-form>
 </div>

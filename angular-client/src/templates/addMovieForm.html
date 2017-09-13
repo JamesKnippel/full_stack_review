@@ -1,3 +1,8 @@
 <div>
-  <!--TODO: fill me in-->
+  <form>
+    <label>Title: <input type="text" ng-model="$ctrl.movie.title"></label>
+    <label>Number Of Copies: <input type="text" ng-model="$ctrl.movie.numberOfCopies"></label>
+    <label>IMDB Rating: <input type="text" ng-model="$ctrl.movie.IMDBrating"></label>
+    <input type="submit" ng-click="$ctrl.submitEntry($ctrl.movie)" ng-submit="$ctrl.func()">
+  </form>
 </div>

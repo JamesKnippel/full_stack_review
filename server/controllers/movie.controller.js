@@ -22,6 +22,18 @@ module.exports = {
     .catch( () => {
       res.status(404)
     })
+  },
+  deleteMovie: (req, res) => {
+    console.log('reqparamsarehere',req.params)
+    movieModel.destroy({ where: {
+      title: req.params.title
+    }})
+    .then( () => {
+      res.status(202)
+    })
+    .catch( () => {
+      res.status(404)
+    })
   }
 }
 

@@ -1,9 +1,13 @@
 angular.module('blockbuster')
   .component('movieList', {
-    bindings: {
-
+    imhere: function(){
+      console.log("i'm inside this fufu bullshit")
     },
-    templateUrl: ''
+    bindings: {
+      movies: '<'
+    },
+    templateUrl: 'src/templates/movieList.html',
   })
+  
 
   

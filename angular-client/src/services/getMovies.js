@@ -3,7 +3,7 @@ angular.module('blockbuster')
   this.getMovies = function() {
     return $http.get('api/movies')
       .then((result) => {
-        console.log('result is' ,result);
+        return result
       })
       .catch((error) => {
         console.log(error);
@@ -11,7 +11,22 @@ angular.module('blockbuster')
   }
   
   this.addMovie = function(data) {
-    //post
+    $http.post('api/movies', data)
+      .then((result) => {
+        console.log(result)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
+  this.deleteMovie = function(title) {
+    $http.delete('api/movies/' + title)
+      .then((result) => {
+        console.log('deleted entry')
+      })
+      .catch((err)=> {
+        console.log(err);
+      })
+  }
 })
